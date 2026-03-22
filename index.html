@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet"/>
+
+    <script
+      src="https://kit.fontawesome.com/151a7f208f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+
+
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>WeatherApp</h1>
+      </div>
+
+      <div class="search-section">
+        <input
+          type="text"
+          class="city-name"
+          id="cityName"
+          placeholder="Enter city name..."
+        />
+        <button class="search-button ani" id="searchButton">Search</button>
+        <button class="my-location-button ani" id="myLocationButton">
+          <i class="fa-solid fa-location-crosshairs"></i> Use my location
+        </button>
+      </div>
+
+      <div class="weather-card">
+        <div class="location" id="locationid">
+          <p id="errorMsg" style="color: #ff6b6b; display: none;">City not found. Please try again.</p>
+          <p class="city-display" id="cityDisplay"></p>
+          <p class="country-name" id="countryName"></p>
+          <img
+            class="weather-icon"
+            id="weatherIcon"
+            src=""
+            alt="weather icon"
+          />
+          <div class="temp">
+            <h2 class="temperature" id="temperatureid">TEMP</h2>
+          <button class="toggle-unit" id="toggleUnit">°C / °F</button>
+          </div>
+          
+          <div class="weathercond">
+            <p class="weather-condition" id="weatherCondition">hello</p>
+          </div>
+          
+          <div class="weather-details" id="weatherDetails">
+            <p id="humidity">
+              <i class="fa-solid fa-droplet"></i> Humidity: <span></span>
+            </p>
+            <p id="windSpeed">
+              <i class="fa-solid fa-wind"></i> Wind: <span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-section">
+        <h3 class="forecast-title">5-Day Forecast</h3>
+        <div class="forecast-cards" id="forecastCards">
+          <!-- js will dynamically insert forecast cards here -->
+        </div>
+      </div>
+
+      <div class="history-section">
+        <h3 class="recent-searches">Recent Searches</h3>
+        <ul id="pastSearches"></ul>
+      </div>
+
+      <div class="note-section">
+        <h4 class="todays-note">Today's Note</h4>
+        <p class="ai-message" id="aiMessage"><span>Generating note for today...</span></p>
+      </div>
+    </div>
+  </body>
+</html>
